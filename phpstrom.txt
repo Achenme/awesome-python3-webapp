@@ -1,0 +1,75 @@
+
+ctrl+shift+f 在一个目录里查找一段代码(ctrl+f的升级版)
+
+
+CTRL+ALT ←/→  返回上次编辑的位置
+ALT+ ↑/↓  在方法间快速移动定位
+ctrl+shift+i查看变量或方法定义源
+
+// ctrl+b 跳到变量申明处
+
+
+10. Ctrl + N，根据类名称查找
+
+11. Ctrl + Shift + N，根据文件名查找
+
+12. Ctrl + Shift + Alt + N，根据函数名查找
+
+门店功能
+
+https://svn.apowo.com/svn/ApowoWebsites/picatown/picadrama_gm
+
+
+系统消息查询
+news
+system_news
+news 表中: news_uid = group_id 社团消息
+news tag_id
+system_news id字段关联
+--------------
+
+
+在一起查询
+分手查询
+
+
+情书查询
+http://picadrama.apowo.dev/home/expressPost
+http://picadrama.apowo.dev/home/doExpress
+折叠情书内容
+
+
+
+社团解散功能
+db_group
+db_user
+db_group_user
+DELETE FROM db_group WHERE id IN
+DELETE FROM db_group_user WHERE group_id IN
+UPDATE db_user 
+	$sql = 'UPDATE db_user SET group_id=0 WHERE group_id IN (' . $joinedGroupIDs . ')';
+$sql = 'UPDATE db_user SET money=money+3 WHERE uid IN (' . $joinedLeaderIDs . ')';
+解散社团
+退出社团
+社长加3p 可选
+
+
+
+社团列表这里，需要社团ID、人数、经验，徽章，LOGO 等其他信息显示。
+
+Bink(291043) 这种形式。 昵称和UID。
+
+
+
+
+
+
+
+INSERT INTO `db_admin_user_auth_cfg` (`id`, `fid`, `show`, `name`, `c`, `m`) VALUES ('2010', '2000', '0', '系统消息查询', 'operate', 'sysnews');
+INSERT INTO `db_admin_user_auth_cfg` (`id`, `fid`, `show`, `name`, `c`, `m`) VALUES ('4016', '4000', '1', '社团列表', 'operate', 'grouplist');
+INSERT INTO `db_admin_user_auth_cfg` (`id`, `fid`, `show`, `name`, `c`, `m`) VALUES ('4017', '4000', '0', '解散单个社团', 'operate', 'dismissone');
+
+INSERT INTO `db_admin_user_auth_cfg` (`id`, `fid`, `show`, `name`, `c`, `m`) VALUES ('3016', '3000', '1', '情书查询', 'lover', 'express');
+INSERT INTO `db_admin_user_auth_cfg` (`id`, `fid`, `show`, `name`, `c`, `m`) VALUES ('3017', '3000', '1', '情侣状态查询', 'lover', 'intimacy');
+
+
